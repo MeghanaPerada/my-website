@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blue Black Team - Landing Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Make navbar horizontally scrollable */
+/* Navbar scrollable with max-width for responsiveness */
+.navbar-scrollable .navbar-nav {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+    overflow-x: auto;  /* Allow horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    max-width: 100%;  /* Ensure it doesn't stretch beyond the viewport */
+}
+
+/* Navbar items spacing */
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Spacing between items */
+    font-size: 1.2rem; /* Larger font for readability */
+    padding: 15px 20px; /* Increased padding for bigger buttons */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgb(2, 2, 30); /* Background on hover */
+    color: #ffffff; /* Text color */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Adjust navbar responsiveness using media queries */
+@media (max-width: 1200px) {
+    .navbar-nav .nav-item {
+        font-size: 1.1rem; /* Slightly smaller font on medium screens */
+        padding: 12px 18px; /* Slightly smaller padding on medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav .nav-item {
+        font-size: 1rem; /* Even smaller font on smaller screens */
+        padding: 10px 15px; /* Smaller padding for mobile devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        font-size: 0.9rem; /* Small font size on very small screens */
+        padding: 8px 12px; /* Further reduced padding for small screens */
+    }
+}
+
+
+        .hero-section {
+            background: linear-gradient(45deg, #0000ff, #000);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem; /* Adjust size for a larger heading */
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .btn-primary {
+            background-color: rgb(2, 2, 37);
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .about-section {
+            background-color: rgb(2, 2, 37); /* Dark Blue Radium */
+    padding: 80px 0;
+    text-align: center;
+    color: white; /* Make the text white to contrast with the dark blue */
+}
+
+.about-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+}
+
+        
+.projects-section {
+    background-color: rgb(2, 2, 37);
+    padding: 80px 0;
+    text-align: center;
+    color: white; /* White text to contrast with the dark background */
+}
+
+.projects-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.projects-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Rounded top corners for the image */
+}
+
+.project-card .card-body {
+    padding: 15px;
+}
+
+.project-card .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff; /* White text for the card title */
+}
+
+.project-card .card-text {
+    font-size: 1rem;
+    color: #ddd; /* Lighter text color for the description */
+
+    padding: 80px 0;
+    text-align: center;
+    color: white; /* White text to contrast with the dark background */
+}
+
+.projects-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.projects-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background-color: #111; /* Keep project card background dark */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Rounded top corners for the image */
+}
+
+.project-card .card-body {
+    padding: 15px;
+}
+
+.project-card .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff; /* White text for the card title */
+}
+
+.project-card .card-text {
+    font-size: 1rem;
+    color: #ddd; /* Lighter text color for the description */
+}
+
+        /* Team Section with black-blue background */
+.team-section {
+    background-color: rgb(2, 2, 37); /* Black-Blue background */
+    padding: 80px 0;
+    text-align: center;
+    color: white; /* White text for contrast */
+}
+
+.team-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.team-section .team-member {
+    background-color: #111; /* Dark background for team cards */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.team-section .team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-section .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Round image for team members */
+    margin-bottom: 15px;
+}
+
+.team-section .team-member h5 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.team-section .team-member p {
+    font-size: 1rem;
+    color: #ddd; /* Lighter text color for the role */
+}
+
+.team-section .team-member p:nth-child(3) {
+    font-style: italic;
+}
+
+
+        /* Footer Section */
+.footer {
+    background-color: #1a1a2e; /* Black-Blue background */
+    color: white; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer a {
+    color: #00f; /* Blue color for links */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0056b3; /* Darker blue when hovering over links */
+    text-decoration: underline;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.footer .social-links {
+    margin-top: 10px;
+}
+
+.footer .social-links a {
+    font-size: 1.5rem;
+    margin: 0 15px;
+}
+
+.footer .social-links a:hover {
+    color: #00f; /* Ensure the color change stays consistent for hover */
+}
+
+
+        .project-card {
+            background-color: #111;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        /* Form Styles */
+        input, textarea {
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .contact-section .form-control {
+            border: 1px solid #ccc;
+        }
+
+        .contact-section button {
+            background-color: #00f;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact-section button:hover {
+            background-color: #0056b3;
+        }
+
+
+
+         </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-scrollable">
+        <div class="container">
+            <img src="https://i.imgur.com/OfBiKwe.jpeg" alt="Blue Black Team" width="400" height="300">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <!-- Add more nav-items here if needed -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <h1>Unleashing Innovation with Blue Black Team</h1>
+            <p>Your trusted partner in groundbreaking projects and innovation.</p>
+            <a href="#about" class="btn btn-primary btn-lg">Join Us</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Our mission is to deliver innovative and impactful solutions. With a strong team and diverse projects, we strive for excellence in every aspect of our work.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2>Our Projects</h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <img src="https://img1.od-cdn.com/ImageType-100/2826-1/%7B1ECEB765-59DE-4A7B-ABBB-4EBE0AECB517%7DImg100.jpg" alt="Cutting-edge Technology"> 
+                        <div class="card-body">
+                            <h5 class="card-title">Cutting-edge Technology</h5>
+                            <p class="card-text">This project focuses on cutting-edge technology to enhance user experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <img src="https://railsware.com/blog/wp-content/uploads/2018/09/PracticalMLforSolvingRWP-illustration.jpg" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Real world Problems</h5>
+                            <p class="card-text">Our second project aims at solving real-world problems with a user-friendly interface.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <img src="https://img.freepik.com/premium-photo/sustainability-it-green-it-computing-concept-carbon-efficient-technology_536572-1551.jpg" alt="sustainability in Tech">
+                        <div class="card-body">
+                            <h5 class="card-title">sustainability in Tech</h5>
+                            <p class="card-text">This innovative project tackles sustainability in tech and focuses on eco-friendly solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="row">
+                <!-- Team Member 1: John -->
+                <div class="col-md-3">
+                    <div class="team-member text-center">
+                        <img class="img-fluid rounded-circle" src="https://media-hyd1-2.cdn.whatsapp.net/v/t61.24694-24/473397376_1175032757550241_4605305536025519438_n.jpg?ccb=11-4&oh=01_Q5AaIHyi7H5C2r96aG-DSXn9zKJQnm8QWSxzCtkTplxQQD9c&oe=6795BECA&_nc_sid=5e03e0&_nc_cat=106" alt="Meghana">
+                        
+                        
+                        <h5>Meghana</h5>
+                        <p>CEO</p>
+                        <p>A visionary leader with a passion for technology and innovation.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2: Leo -->
+                <div class="col-md-3">
+                    <div class="team-member text-center">
+                        <img class="img-fluid rounded-circle" src="https://media.licdn.com/dms/image/v2/D5603AQETrX2DWkxNMg/profile-displayphoto-shrink_400_400/B56ZQy.cjMGoAg-/0/1736022019479?e=1742428800&v=beta&t=6f0sAJ_K_uRr8QaROEdjoLe7X9HuU2huaQKjcIDmrTk" alt="Karthikeya">
+                        <h5>Karthikeya</h5>
+                        <p>CTO</p>
+                        <p>Leading tech initiatives with expertise in AI and cloud technologies.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3: Jane -->
+                <div class="col-md-3">
+                    <div class="team-member text-center">
+                        <img class="img-fluid rounded-circle" src="https://media.licdn.com/dms/image/v2/D4E03AQGLQveCvcI1eA/profile-displayphoto-shrink_100_100/B4EZRHM3q9GwAY-/0/1736361344181?e=1742428800&v=beta&t=6_j9uyMdhaamNUGdznVd2Ab7OIMY0raeUNhjie0uYmc" alt="Kaushik">
+                        <h5>Kaushik</h5>
+                        <p>Lead Designer</p>
+                        <p>Creative mind behind the UI/UX and visual identity of the team.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4: Sam -->
+                <div class="col-md-3">
+                    <div class="team-member text-center">
+                        <img class="img-fluid rounded-circle" src="https://media-hyd1-2.cdn.whatsapp.net/v/t61.24694-24/465652029_1637159153897830_2818380911728345501_n.jpg?ccb=11-4&oh=01_Q5AaIK9IckDLjBX0ptzEaUMgAi8NB6zRZFNIqP6BMvrJ3fV-&oe=67959CDE&_nc_sid=5e03e0&_nc_cat=110" alt="Balu">
+                        <h5>Balu</h5>
+                        <p>Project Manager</p>
+                        <p>Ensuring smooth execution of all projects and operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/mwkngynk" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" name="message" placeholder="Your Message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Blue Black Team | <a href="#">Privacy Policy</a></p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/yourprofile" target="_blank" title="Instagram">
+                <img src="https://logos-world.net/wp-content/uploads/2020/06/Instagram-Logo.png" alt="Instagram" style="width: 40px; height: auto;">
+                
+            </a>
+            <a href="https://www.twitter.com/yourprofile" target="_blank" title="Twitter">
+                <img src="https://static.vecteezy.com/system/resources/previews/027/395/710/original/twitter-brand-new-logo-3-d-with-new-x-shaped-graphic-of-the-world-s-most-popular-social-media-free-png.png" alt="Twitter" style="width: 40px; height: auto;">
+                
+            </a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank" title="Facebook">
+                <img src="https://ugc.production.linktr.ee/3pzei6WjRWCS9g9XOYgT_Facebook.png" alt="Facebook" style="width: 40px; height: auto;">
+                
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+        </script>
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+    
+        <!-- Form Validation -->
+        <script>
+            document.querySelector("form").addEventListener("submit", function(event) {
+                let name = document.getElementById('name').value;
+                let email = document.getElementById('email').value;
+                let message = document.querySelector("textarea").value;
+    
+                if (name === "" || email === "" || message === "") {
+                    event.preventDefault();
+                    alert("Please fill out all fields before submitting.");
+                } else {
+                    let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                    if (!emailRegex.test(email)) {
+                        event.preventDefault();
+                        alert("Please enter a valid email address.");
+                    }
+                }
+            });
+        </script>
+    
+        <!-- Scroll to Top Button -->
+        <script>
+            window.onscroll = function() {
+                let btn = document.getElementById('scrollToTopBtn');
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    btn.style.display = "block";
+                } else {
+                    btn.style.display = "none";
+                }
+            };
+    
+            document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+    
+    </body>
+    </html>
+
