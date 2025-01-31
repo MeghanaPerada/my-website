@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthify - Your Path to Better Health</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'poppins', sans-serif;
+            color: #000000;
+            background: linear-gradient(to right, #F9A8D4, #0878e8);
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Adjust navbar for responsiveness */
+        .navbar-scrollable .navbar-nav {
+            background: linear-gradient(to right, #F9A8D4, #0878e8);
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            max-width: 100%;
+        }
+
+        .navbar-nav .nav-item {
+            background: linear-gradient(to right, #F9A8D4, #0878e8);
+            margin-right: 50px;
+            margin-left: 50px;
+            font-size: 1.2rem;
+            padding: 20px 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: rgb(175, 53, 167);
+            color: #ffffff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Navbar responsiveness adjustments */
+        @media (max-width: 1200px) {
+            .navbar-nav .nav-item {
+                background: linear-gradient(to right, #F9A8D4, #0878e8);
+                font-size: 1.1rem;
+                padding: 12px 18px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-nav .nav-item {
+                background: linear-gradient(to right, #F9A8D4, #0878e8);
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav .nav-item {
+                background: linear-gradient(to right, #F9A8D4, #0878e8);
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(to right, #F9A8D4, #0878e8);
+            background-image: url('https://help4flash.com/wp-content/uploads/2020/06/LET%E2%80%99S-LIVE-HEALTHY-AND-HAPPY-LIFE.jpg'); /* Background image URL */
+            background-size: cover; /* Ensures the image covers the entire section */
+            background-position: center center; /* Keeps the image centered */
+            height: 100vh;
+            color: rgb(14, 10, 10);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            background-color: #F9A8D4;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #A1C6EA;
+        }
+
+        /* About Section */
+        .about-section {
+            background: linear-gradient(to right, #F9A8D4, #0878e8);
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #F9A8D4;
+            margin-bottom: 30px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        .about-section img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        /* Services Section */
+        .services-section {
+            background: linear-gradient(to right, #F9A8D4, #0878e8);
+            padding: 80px 0;
+        }
+
+        .service-card {
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-card h3 {
+            color: #000;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #000;
+            font-size: 1rem;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            padding: 60px 20px;
+            background-color: #E5F7FF;
+        }
+
+        .blog-card {
+            background: linear-gradient(to right, #F9A8D4, #0878e8);
+            border: 1px solid #A1C6EA;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: scale(1.05);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .blog-card .card-body {
+            padding: 20px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .blog-card a {
+            color: #A1C6EA;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(to right, #F9A8D4, #0878e8);
+            padding: 30px 0;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <!-- Toggler for mobile screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="healthy-eating.html">Healthy Eating</a>
+                            
+                <li class="nav-item"><a class="nav-link" href="exercise-tips.html">Exercise Tips</a>
+                            
+                <li class="nav-item"><a class="nav-link" href="mental-health.html">Mental Health</a>
+                                
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="first-aid.html">First Aid</a>
+                                
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
+                                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        
+        <h1>Welcome to Healthify</h1>
+        <p>Your path to better health starts here. Join us today for personalized wellness programs.</p>
+        <a href="#about" class="cta-btn">Learn More About Us</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Healthify</h2>
+            <p>At Healthify, we believe that everyone deserves to live a healthy, balanced life. Our team of experts is dedicated to providing you with the tools, knowledge, and support you need to make informed decisions about your health...</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/buddha-bowl-with-avocado-egg-chickpeas-tomato-royalty-free-image-1670947868.jpg?crop=1xw:0.84415xh;center,top&resize=1200:*" alt="Diet Plan">
+                        <h3>Diet Plans</h3>
+                        <p>Personalized nutrition guides tailored to your specific needs and goals.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <img src="https://www.arabamericannews.com/wp-content/uploads/2021/06/mentalwellness_articleCR.jpg" alt="Mental Health">
+                        <h3>Mental Health</h3>
+                        <p>Expert tips and resources to support mental well-being and balance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <img src="http://home.relentlesstraining24.com/wp-content/uploads/2018/07/fitness-web-dark.jpg" alt="Exercise">
+                        <h3>Exercise</h3>
+                        <p>Effective workout plans for all levels to help you stay active and healthy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <h2 class="text-center mb-5">Latest Blog Posts</h2>
+            <div class="row">
+                <!-- Blog Card 1 -->
+                <div class="col-md-4">
+                    <div class="card blog-card">
+                        <img src="https://www.nmamilife.com/wp-content/uploads/2020/01/7-blog-1.jpg" alt="Blog Post 1">
+                        <div class="card-body">
+                            <h3>5 Tips for Mindful Eating</h3>
+                            <p>Learn how to improve your eating habits and become more aware of your food choices.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 2 -->
+                <div class="col-md-4">
+                    <div class="card blog-card">
+                        <img src="https://convenientmd.com/wp-content/uploads/2020/05/shutterstock_1112658119-scaled.jpg" alt="Blog Post 2">
+                        <div class="card-body">
+                            <h3>How to Stay Active at Home</h3>
+                            <p>Stay fit and healthy without a gym – exercises you can do anywhere!</p>
+                    
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 3 -->
+                <div class="col-md-4">
+                    <div class="card blog-card">
+                        <img src="https://www.cnet.com/a/img/resize/4f1d2e1baefb5865115d84315bcc612dab6f2c1a/hub/2023/01/20/58f3b497-1fc3-4de2-b99f-c568f8868a8f/gettyimages-1345002869.jpg?auto=webp&fit=crop&height=630&width=1200" alt="Blog Post 3">
+                        <div class="card-body">
+                            <h3>Boosting Your Mental Health</h3>
+                            <p>Simple tips to reduce stress and improve your overall mental well-being.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Healthify. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
